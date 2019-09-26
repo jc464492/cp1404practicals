@@ -2,7 +2,6 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 
-
 class SquareNumberApp(App):
 
     def build(self):
@@ -14,6 +13,5 @@ class SquareNumberApp(App):
     def handle_calculate(self, value):
         result = value ** 2
         self.root.ids.output_label.text = str(result)
-
 
 SquareNumberApp().run()

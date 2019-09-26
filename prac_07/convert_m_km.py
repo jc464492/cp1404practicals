@@ -4,7 +4,6 @@ from kivy.properties import StringProperty
 
 MILES_TO_KM = 1.60934
 
-
 class MilesConverterApp(App):
     output_km = StringProperty()
 
@@ -35,6 +34,5 @@ class MilesConverterApp(App):
             return value
         except ValueError:
             return 0.0
-
 
 MilesConverterApp().run()

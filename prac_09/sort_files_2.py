@@ -2,6 +2,7 @@ import os
 
 def main():
     """Move files into where user wants to store them based on extension."""
+    extension_to_category = {}
     os.chdir("FilesToSort")
     for filename in os.listdir('.'):
         if os.path.isdir(filename):
@@ -14,6 +15,8 @@ def main():
             try:
                 os.mkdir(category)
             except FileExistsError:
-    os.rename(filename, "{}/{}".format(extension_to_category[extension], filename))
+                pass
+
+        os.rename(filename, "{}/{}".format(extension_to_category[extension], filename))
 
 main()

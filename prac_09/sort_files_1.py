@@ -8,10 +8,12 @@ def main():
             continue
 
         extension = filename.split('.')[-1]
+
         try:
             os.mkdir(extension)
         except FileExistsError:
-            print.("{}/{}".format(extension, filename))
+            pass
+        print("{}/{}".format(extension, filename))
         os.rename(filename, "{}/{}".format(extension, filename))
 
 main()
